@@ -15,7 +15,6 @@ jobs:
           username: ${{Secrets.SSH_USERNAME}}
 
           script: |
-            mkdir landing
-            cd landing
+            cd /var/www/html
             git clone git@github.com:mbobiosio/Coming-Soon-Page.git
             echo 'Deployed successfully'
