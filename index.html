@@ -28,6 +28,12 @@
             <!-- social-btn --></div>
         <!-- display-table --></div>
     <!-- display-table-cell --></div>
-<!-- main-area -->
+<!--
+ mkdir -p ~/.ssh
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+ssh-keygen -t rsa -C "user.email"
+open the public key with this command $ cat ~/.ssh/id_rsa.pub and copy it.
+Add the id_rsa.pub key to SSH keys list on your GitHub profile.
+ -->
 </body>
 </html>
