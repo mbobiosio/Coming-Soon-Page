@@ -15,8 +15,8 @@ jobs:
           HOST: ${{ secrets.SSH_HOST }}
           PORT: ${{ secrets.SSH.PORT }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          #PASSWORD: ${{ secrets.SSH_PASSWORD }}
-          KEY: ${{ secrets.SSH_KEY }}
+          PASSWORD: ${{ secrets.SSH_PASSWORD }}
+          #KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "."
           target: "/var/www/html"
@@ -27,8 +27,8 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           PORT: ${{ secrets.SSH.PORT }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          #PASSWORD: ${{ secrets.SSH_PASSWORD }}
-          KEY: ${{ secrets.SSH_KEY }}
+          PASSWORD: ${{ secrets.SSH_PASSWORD }}
+          #KEY: ${{ secrets.SSH_KEY }}
           script: |
             echo 'Deployed successfully'
 
