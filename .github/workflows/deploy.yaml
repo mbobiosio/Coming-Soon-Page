@@ -12,10 +12,10 @@ jobs:
       - name: Copy file via scp
         uses: appleboy/scp-action@master
         env:
-          HOST: ${{ secrets.SSH_HOST }}
-          PORT: ${{ secrets.SSH.PORT }}
-          USERNAME: ${{ secrets.SSH_USERNAME }}
-          PASSWORD: ${{ secrets.SSH_PASSWORD }}
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH.PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
           #KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "."
@@ -25,12 +25,13 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          PORT: ${{ secrets.SSH.PORT }}
-          USERNAME: ${{ secrets.SSH_USERNAME }}
-          PASSWORD: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH.PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: whoami
           #KEY: ${{ secrets.SSH_KEY }}
-          script: |
-            echo 'Deployed successfully'
+          #script: |
+          #echo 'Deployed successfully'
 
 
 #  deploy:
